@@ -1,8 +1,119 @@
 .container {
+  width: 100%;
+  max-width: 1283px;
+  max-height: 841 px;
+  //margin: 0;
+  //padding: 0;
+  //align-items: auto;
+  justify-content: center;
+  position: relative;
   display: flex;
-}
 
-.img__header {
-  width: 1280px;
-  height: 826px;
+  .img__background {
+    width: 1283px;
+    height: 841px;
+    background-position: center;
+    //background-size: cover;
+    display: flex;
+    //object-fit: cover;
+    //object-position: bottom;
+  }
+
+  .header {
+    width: 100%;
+    max-width: 1283px;
+    max-height: 841px;
+    position: absolute;
+    display: flex;
+    //margin-left: 121px;
+    //margin-top: 42px;
+  }
+
+  .text {
+    width: 100%;
+    max-width: 1283px;
+    max-height: 841px;
+    position: absolute;
+
+    color: #ffffff;
+    margin-left: 121px;
+    margin-top: 120px;
+
+    h6 {
+      font: 700 1rem "Roboto";
+      font-size: 64px;
+      align-items: flex-start;
+      height: auto;
+    }
+    p {
+      font: 600 1rem "Roboto";
+      font-size: 18px;
+      font-style: normal;
+      height: auto;
+      letter-spacing: -0.015em;
+      align-self: stretch;
+      flex: none;
+    }
+
+    span {
+      font: 400 1rem "Bodoni";
+      font-size: 79px;
+      font-style: italic;
+      height: auto;
+    }
+
+    @media (min-width: 1080px) {
+      html {
+        font-size: 93.75%;
+      }
+    }
+    @media (min-width: 720px) {
+      html {
+        font-size: 87.5%;
+      }
+    }
+  }
+
+  .button {
+    width: 100%;
+    max-width: 1283px;
+    max-height: 841px;
+    position: absolute;
+    margin-top: -120px;
+    width: 176px;
+    height: 21px;
+  }
+  .title {
+    width: 100%;
+    max-width: 1283px;
+    max-height: 841 px;
+    margin-top: 906px;
+    margin-left: 100px;
+    position: absolute;
+    font: 700 1rem "Roboto";
+
+    h1 {
+      font-style: normal;
+      font-size: 36px;
+      height: auto;
+    }
+
+    .title__line-through {
+      font-style: normal;
+      font-size: 36px;
+      height: auto;
+      text-decoration: line-through;
+    }
+    .title__italic {
+      font-style: italic;
+      font-size: 36px;
+      height: auto;
+    }
+    p {
+      font: 400 1rem "Roboto";
+      font-size: 18px;
+      font-style: normal;
+      height: auto;
+    }
+  }
 }
