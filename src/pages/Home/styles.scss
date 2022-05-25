@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+
   max-width: 1283px;
   max-height: 841 px;
   //margin: 0;
@@ -45,6 +46,7 @@
       align-items: flex-start;
       height: auto;
     }
+
     p {
       font: 600 1rem "Roboto";
       font-size: 18px;
@@ -114,6 +116,33 @@
       font-size: 18px;
       font-style: normal;
       height: auto;
+    }
+  }
+  .case__list__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
+
+    //grid-template-rows:
+
+    grid-row-gap: 80px;
+    grid-column-gap: 32px;
+  }
+
+  .video__text {
+    width: 100%;
+    max-width: 1283px;
+    max-height: 841 px;
+    position: absolute;
+    margin-top: 2054px;
+    margin-left: 100px;
+    display: flex;
+
+    .video__title {
+      h6 {
+      }
+      div {
+      }
     }
   }
 }

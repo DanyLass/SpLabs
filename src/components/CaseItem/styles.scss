@@ -1,0 +1,43 @@
+.case__container {
+  width: 100%;
+  max-width: 1283px;
+  max-height: 841 px;
+  color: #000000;
+  margin-right: 100px;
+
+  .case__title {
+    font: 700 1rem "Roboto";
+    font-size: normal;
+    font-size: 24px;
+    height: auto;
+    margin-top: 80px;
+    margin-bottom: 16px;
+    // margin-left: 100px;
+    //
+  }
+  .case__text {
+    font: 400 1rem "Roboto";
+    font-size: normal;
+    font-size: 18px;
+    height: auto;
+  }
+
+  .case__button {
+    font: 500 1rem "Roboto";
+    font-size: 14px;
+
+    border-color: #e5e5e5;
+    border-radius: 4px;
+    background-color: #ffffff;
+    width: 132px;
+    height: 40px;
+
+    &:hover {
+      border-color: #c4c4c4;
+    }
+  }
+
+  div {
+    margin-top: 16px;
+  }
+}
