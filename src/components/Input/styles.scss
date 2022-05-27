@@ -1,16 +1,13 @@
 .input__container {
   margin-top: 16px;
-  align-content: center;
 
   input {
-    border-radius: none;
     display: flex;
-
     width: 356px;
     height: 48px;
     border-radius: 4px;
 
-    border: 2px solid #e5e5e5e5;
+    border: 1px solid #e5e5e5e5;
   }
 
   &:hover {

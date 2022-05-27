@@ -9,17 +9,14 @@ import "./styles.scss";
 import { api } from "../../services/api";
 
 export function Home() {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
+  const [cases, setCases] = useState([]);
 
   async function getCases() {
     await api
       .get("/cases")
       .then((response) => {
         const data = response.data.cases;
-        setTitle(data[0].title);
-        setDescription(data[0].description);
-        console.log(data);
+        setCases(data);
       })
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
@@ -29,6 +26,12 @@ export function Home() {
   useEffect(() => {
     getCases();
   }, []);
+
+  const renderCases = () => {
+    cases.map((item) => {
+      return <CaseItem title={item.title} description={item.description} />;
+    });
+  };
 
   return (
     <main class="home__container">
@@ -63,20 +66,25 @@ export function Home() {
           <p>Confira nossos cases de sucesso que vão além do mundo juridico.</p>
         </div>
         <div class="cases__container__list">
-          <CaseItem title={title} description={description} />
-          <CaseItem />
-          <CaseItem />
-          <CaseItem />
-          <CaseItem />
+          {/* {renderCases()} */}
+          <CaseItem title={cases[0].title} description={cases[0].description} />
+          <CaseItem title={cases[1].title} description={cases[1].description} />
+          <CaseItem title={cases[2].title} description={cases[2].description} />
+          <CaseItem title={cases[3].title} description={cases[3].description} />
+          <CaseItem title={cases[4].title} description={cases[4].description} /> 
         </div>
       </section>
       <section class="video__container">
         <div class="title__container">
-          <h6>Quem são, o que fazem, onde<br/>
-           vivem?</h6>
+          <h6>
+            Quem são, o que fazem, onde
+            <br />
+            vivem?
+          </h6>
           <section>
             Não precisa embedar o vídeo do Rick Astley Remastered 4K 60 FPS,
-            pode ser qualquer outro vídeo da sua escolha, mas queremos<br/> dar play.
+            pode ser qualquer outro vídeo da sua escolha, mas queremos
+            <br /> dar play.
           </section>
         </div>
         <div class="video__Iframe">
