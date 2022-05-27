@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../../components/Button";
 import { CaseItem } from "../../components/CaseItem";
 import { Iframe } from "../../components/Iframe";
+import { ContatctForm } from "../../components/ContactForm";
 import logo from "../../assets/logo.svg";
 import "./styles.scss";
 
@@ -57,6 +58,12 @@ export function Home() {
         <div class="video__Iframe">
           <Iframe embedId="tgIRmwMvlf4" />
         </div>
+      </section>
+      
+      <section class="contact__container">
+        
+        <ContatctForm />
+        
       </section>
     </main>
   );

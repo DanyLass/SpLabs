@@ -1,0 +1,66 @@
+.register__container {
+  box-shadow: 0 0 10px #e5e5e5e5;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h4 {
+    font: 700 1rem "Roboto";
+    font-style: normal;
+    font-size: 36px;
+    color: #000000;
+  }
+  .form__text {
+    padding-left: 32px;
+    margin-top: 16px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    h6 {
+      font: 400 1rem "Roboto";
+      font-size: 14px;
+      font-style: normal;
+    }
+  }
+
+  .form__container {
+    box-shadow: 0 0 0.7px #000000;
+    flex-direction: column;
+    background-color: #ffffff;
+    display: flex;
+  }
+
+  .register__button {
+    align-items: center;
+    padding: 12px 32px 12px 32px;
+  }
+
+  .ls__select {
+    border: 1px solid #e5e5e5e5;
+    font: 400 1rem "Roboto";
+    font-style: normal;
+    font-size: 16px;
+    color: #363535c4;
+    border-radius: 4px;
+
+    &:hover {
+      border: 1px solid #c4c4c4;
+    }
+
+    input:focus {
+      outline: none !important;
+      border-color: #45e6bf;
+    }
+
+
+
+
+
+  }
+
+}
+

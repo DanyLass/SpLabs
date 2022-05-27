@@ -9,7 +9,8 @@
       url("/assets/back.jpg");
     background-size: cover;
     background-position: center;
-    //position: absolute;
+
+    flex: 1;
 
     .header__container {
       display: flex;
@@ -106,7 +107,9 @@
   }
 
   .video__container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    // display: flex;
     align-items: center;
     margin: 0 100px;
 
@@ -130,7 +133,13 @@
     }
 
     .video__Iframe {
-      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      //grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     }
+  }
+
+  .contact__container {
+    margin-top: 80px;
+
+    background-image: linear-gradient(to bottom left, #ffffff 50%, #5dfed6);
   }
 }
