@@ -1,24 +1,29 @@
 .input__container {
-  margin-top: 32px;
+  margin-top: 16px;
   align-content: center;
 
   input {
-    font: 400 1rem "Roboto";
-    font-size: 16px;
-    font-style: normal;
+    border-radius: none;
+    display: flex;
 
+    width: 356px;
+    height: 48px;
     border-radius: 4px;
 
-    color: #343434;
-
-    border: 1px solid #e5e5e5e5;
-
-    &:hover {
-      border: 1px solid #c4c4c4;
-    }
+    border: 2px solid #e5e5e5e5;
   }
-}
-input:focus {
-  outline: none !important;
-  border-color: #45e6bf;
+
+  &:hover {
+    border: 1px solid #c4c4c4;
+  }
+
+  input::-webkit-input-placeholder {
+    color: #343434;
+    padding-left: 16px;
+  }
+
+  input:focus {
+    outline: none !important;
+    border-color: #45e6bf;
+  }
 }

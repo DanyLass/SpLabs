@@ -5,7 +5,6 @@ import "./styles.scss";
 export function Checkbox({ label, isSelected, onCheckboxChange }) {
   return (
     <div class="form__check">
-      <label for={label}> {label} </label>
       <input
         type="checkbox"
         name={label}

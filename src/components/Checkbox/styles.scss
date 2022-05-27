@@ -1,8 +1,19 @@
-.form-check {
+.form__check {
+  display: flex;
+
   label {
     cursor: pointer;
   }
-}
-input:checked {
-  accent-color: #45e6bf;
+
+  input {
+    width: 20px;
+    height: 20px;
+  }
+
+  input:checked {
+    accent-color: #45e6bf;
+    width: 20px;
+    height: 20px;
+    
+  }
 }

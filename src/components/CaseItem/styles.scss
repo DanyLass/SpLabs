@@ -10,6 +10,7 @@
 
   .case__description__container {
     padding-right: 100px;
+    padding-bottom: 16px;
   }
 
   .case__description {
@@ -19,18 +20,25 @@
     line-height: 30px;
   }
 
-  .case__button {
+  button {
+    border: 1px solid #c4c4c4;
     font: 500 1rem "Roboto";
     font-size: 14px;
-    border-color: #e5e5e5;
     border-radius: 4px;
+    padding: 8px 24px;
+    position: relative;
+    vertical-align: middle;
     background-color: #ffffff;
-    width: 132px;
-    height: 40px;
 
     &:hover {
-      border-color: #c4c4c4;
+      border: 1px solid #343434;
     }
+  }
+
+  button img {
+    position: relative;
+    vertical-align: middle;
+    padding-left: 8px;
   }
 
   div {
