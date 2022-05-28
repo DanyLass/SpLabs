@@ -8,7 +8,7 @@ export function Iframe({ embedId }) {
         width="512px"
         height="297px"
         src={`https://www.youtube.com/embed/${embedId}`}
-        frameborder="0"
+        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
         title="Embedded youtube"

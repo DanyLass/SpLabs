@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Button } from "../../components/Button";
 import { CaseItem } from "../../components/CaseItem";
 import { Iframe } from "../../components/Iframe";
@@ -10,22 +10,26 @@ import { api } from "../../services/api";
 
 export function Home() {
   const [cases, setCases] = useState([]);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
-  async function getCases() {
+  const getCases = useCallback(async () => {
     await api
       .get("/cases")
       .then((response) => {
         const data = response.data.cases;
+        setTitle(data[0].title);
+        setDescription(data[0].description);
         setCases(data);
       })
       .catch((err) => {
         console.error("ops! ocorreu um erro" + err);
       });
-  }
+  }, []);
 
   useEffect(() => {
     getCases();
-  }, []);
+  }, [getCases]);
 
   const renderCases = () => {
     cases.map((item) => {
@@ -67,11 +71,11 @@ export function Home() {
         </div>
         <div class="cases__container__list">
           {/* {renderCases()} */}
-          <CaseItem title={cases[0].title} description={cases[0].description} />
-          <CaseItem title={cases[1].title} description={cases[1].description} />
-          <CaseItem title={cases[2].title} description={cases[2].description} />
-          <CaseItem title={cases[3].title} description={cases[3].description} />
-          <CaseItem title={cases[4].title} description={cases[4].description} /> 
+          <CaseItem title={title} description={description} />
+          {/* <CaseItem title={cases[1].title} description={cases[1].description}/> */}
+          <CaseItem />
+          <CaseItem />
+          <CaseItem />
         </div>
       </section>
       <section class="video__container">
@@ -91,7 +95,6 @@ export function Home() {
           <Iframe embedId="tgIRmwMvlf4" />
         </div>
       </section>
-
       <section class="contact__container">
         <ContatctForm />
       </section>
